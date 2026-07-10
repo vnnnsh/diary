@@ -1,0 +1,1664 @@
+/* ===========================================
+   GOOGLE FONTS
+=========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================================
+   RESET
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+html{
+    overflow-x:hidden;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+    135deg,
+    #ffd6e7,
+    #ffe6f2,
+    #ffc7dc,
+    #ffd9ec);
+
+    background-size:400% 400%;
+
+    animation:gradientMove 15s ease infinite;
+
+    color:#4b244a;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+    position:relative;
+
+}
+
+
+/* ===========================================
+   ANIMATED BACKGROUND
+=========================================== */
+
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+
+
+/* ===========================================
+   STARS
+=========================================== */
+
+.stars{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+z-index:-2;
+
+background-image:
+
+radial-gradient(white 1px, transparent 1px),
+radial-gradient(#fff6fa 1px, transparent 1px),
+radial-gradient(#ffffff 2px, transparent 2px);
+
+background-size:
+
+180px 180px,
+250px 250px,
+350px 350px;
+
+animation:twinkle 12s linear infinite;
+
+opacity:.7;
+
+}
+
+@keyframes twinkle{
+
+0%{
+
+transform:translateY(0);
+
+opacity:.6;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-60px);
+
+opacity:.6;
+
+}
+
+}
+
+
+
+/* ===========================================
+   FLOATING HEARTS
+=========================================== */
+
+.hearts{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:-1;
+
+}
+
+.hearts::before,
+.hearts::after{
+
+content:"💖 💗 💕 🤍 💞 ❤️ 💓";
+
+position:absolute;
+
+font-size:28px;
+
+opacity:.25;
+
+animation:heartFloat 18s linear infinite;
+
+white-space:nowrap;
+
+}
+
+.hearts::before{
+
+left:-20%;
+
+bottom:-10%;
+
+}
+
+.hearts::after{
+
+right:-30%;
+
+bottom:-25%;
+
+animation-duration:24s;
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:translateY(0) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(-130vh) rotate(360deg);
+
+}
+
+}
+
+
+
+/* ===========================================
+   CUTE CAT GIFS
+=========================================== */
+
+.cat{
+
+position:fixed;
+
+width:140px;
+
+z-index:10;
+
+pointer-events:none;
+
+opacity:.95;
+
+filter:drop-shadow(0 10px 15px rgba(255,105,180,.3));
+
+animation:catFloat 4s ease-in-out infinite;
+
+}
+
+.leftCat{
+
+left:25px;
+
+bottom:25px;
+
+}
+
+.rightCat{
+
+right:25px;
+
+bottom:25px;
+
+animation-delay:2s;
+
+}
+
+@keyframes catFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+/* ===========================================
+   HERO SECTION
+=========================================== */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+padding:40px;
+
+position:relative;
+
+}
+
+.smallHero{
+
+min-height:60vh;
+
+}
+
+.hero h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:90px;
+
+color:#ff2d75;
+
+text-shadow:
+
+0 0 20px rgba(255,105,180,.5);
+
+margin-bottom:20px;
+
+animation:fadeDown 1.2s ease;
+
+}
+
+.hero h2{
+
+font-size:34px;
+
+font-weight:600;
+
+margin-bottom:15px;
+
+color:#d63384;
+
+animation:fadeDown 1.5s ease;
+
+}
+
+.hero h3{
+
+font-size:42px;
+
+font-family:'Great Vibes',cursive;
+
+color:#ff4f96;
+
+margin-bottom:30px;
+
+animation:fadeDown 1.8s ease;
+
+}
+
+.hero p{
+
+max-width:850px;
+
+font-size:20px;
+
+line-height:1.9;
+
+background:rgba(255,255,255,.45);
+
+padding:35px;
+
+border-radius:30px;
+
+backdrop-filter:blur(15px);
+
+box-shadow:
+
+0 10px 40px rgba(255,105,180,.25);
+
+animation:fadeUp 2s ease;
+
+}
+
+
+
+/* ===========================================
+   START BUTTON
+=========================================== */
+
+.scrollBtn{
+
+margin-top:45px;
+
+display:inline-block;
+
+padding:18px 45px;
+
+background:linear-gradient(
+
+45deg,
+
+#ff4d94,
+
+#ff77aa);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-size:20px;
+
+font-weight:600;
+
+transition:.4s;
+
+box-shadow:
+
+0 10px 30px rgba(255,105,180,.4);
+
+animation:pulse 2s infinite;
+
+}
+
+.scrollBtn:hover{
+
+transform:translateY(-6px) scale(1.05);
+
+box-shadow:
+
+0 20px 40px rgba(255,105,180,.6);
+
+}
+
+
+
+/* ===========================================
+   TEXT SELECTION
+=========================================== */
+
+::selection{
+
+background:#ff6cae;
+
+color:white;
+
+}
+
+
+
+/* ===========================================
+   SCROLLBAR
+=========================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#ffe3f1;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff7eb3;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#ff4f96;
+
+}
+
+
+
+/* ===========================================
+   FADE ANIMATIONS
+=========================================== */
+
+@keyframes fadeDown{
+
+from{
+
+opacity:0;
+
+transform:translateY(-50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes fadeLeft{
+
+from{
+
+opacity:0;
+
+transform:translateX(-60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+@keyframes fadeRight{
+
+from{
+
+opacity:0;
+
+transform:translateX(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+
+
+/* ===========================================
+   PULSE ANIMATION
+=========================================== */
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+
+
+/* ===========================================
+   FLOATING EFFECT
+=========================================== */
+
+.float{
+
+animation:floatItem 5s ease-in-out infinite;
+
+}
+
+@keyframes floatItem{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+/* ===========================================
+   GALLERY SECTION
+=========================================== */
+
+.gallery,
+#gallery{
+
+    width:90%;
+    max-width:1400px;
+
+    margin:80px auto;
+
+}
+
+.photoCard{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+
+    margin:90px 0;
+
+    padding:40px;
+
+    background:rgba(255,255,255,.35);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:35px;
+
+    border:2px solid rgba(255,255,255,.4);
+
+    box-shadow:
+    0 15px 45px rgba(255,105,180,.18);
+
+    transition:.45s;
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.photoCard:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+    0 25px 60px rgba(255,105,180,.35);
+
+}
+
+.photoCard.reverse{
+
+    flex-direction:row-reverse;
+
+}
+
+
+
+/* ===========================================
+   IMAGE CONTAINER
+=========================================== */
+
+.image{
+
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+
+}
+
+.image img{
+
+    width:100%;
+    max-width:430px;
+
+    border-radius:30px;
+
+    border:8px solid white;
+
+    box-shadow:
+    0 0 0 6px #ffb4d2,
+    0 0 30px rgba(255,105,180,.45),
+    0 18px 40px rgba(0,0,0,.15);
+
+    transition:.45s;
+
+}
+
+.image img:hover{
+
+    transform:scale(1.05) rotate(-1deg);
+
+    box-shadow:
+    0 0 0 6px #ff79b0,
+    0 0 45px rgba(255,105,180,.7),
+    0 22px 50px rgba(0,0,0,.2);
+
+}
+
+
+
+/* ===========================================
+   PHOTO TEXT
+=========================================== */
+
+.text{
+
+    flex:1;
+
+}
+
+.text h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    color:#ff3f8b;
+
+    margin-bottom:25px;
+
+}
+
+.text p{
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#5b3654;
+
+}
+
+
+
+/* ===========================================
+   LOVE QUOTE
+=========================================== */
+
+.loveQuote{
+
+    width:90%;
+    max-width:1000px;
+
+    margin:90px auto;
+
+    text-align:center;
+
+    padding:55px;
+
+    border-radius:35px;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(16px);
+
+    box-shadow:
+    0 15px 45px rgba(255,105,180,.25);
+
+}
+
+.loveQuote h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:70px;
+
+    color:#ff4d94;
+
+    margin-bottom:25px;
+
+}
+
+.loveQuote p{
+
+    font-size:20px;
+
+    line-height:2;
+
+}
+
+
+
+/* ===========================================
+   LETTER
+=========================================== */
+
+.letter,
+.loveLetter,
+.promise{
+
+    width:90%;
+    max-width:1100px;
+
+    margin:100px auto;
+
+    padding:60px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+    0 20px 55px rgba(255,105,180,.25);
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.letter h1,
+.loveLetter h1,
+.promise h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:72px;
+
+    color:#ff3f8b;
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.letter p,
+.promise p{
+
+    font-size:20px;
+
+    line-height:2.1;
+
+    text-align:center;
+
+}
+
+.letterBox{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    border:4px dashed #ff8dbb;
+
+    box-shadow:
+    inset 0 0 20px rgba(255,182,193,.35);
+
+}
+
+.letterBox p{
+
+    font-size:20px;
+
+    line-height:2.1;
+
+    text-align:left;
+
+}
+
+
+
+/* ===========================================
+   ENDING
+=========================================== */
+
+.ending{
+
+    width:90%;
+    max-width:1000px;
+
+    margin:90px auto;
+
+    text-align:center;
+
+}
+
+.ending h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:70px;
+
+    color:#ff4d94;
+
+    margin-bottom:25px;
+
+}
+
+.ending p{
+
+    font-size:20px;
+
+    line-height:2;
+
+}
+
+
+
+/* ===========================================
+   NAVIGATION
+=========================================== */
+
+.navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin:80px 0;
+
+    flex-wrap:wrap;
+
+}
+
+.navigation a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+    45deg,
+    #ff4d94,
+    #ff8cbc);
+
+    transition:.4s;
+
+    box-shadow:
+    0 10px 25px rgba(255,105,180,.4);
+
+}
+
+.navigation a:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 20px 40px rgba(255,105,180,.6);
+
+}
+
+.navigation .disabled{
+
+    opacity:.5;
+
+    cursor:default;
+
+    pointer-events:none;
+
+}
+
+
+
+/* ===========================================
+   FOOTER
+=========================================== */
+
+footer{
+
+    margin-top:80px;
+
+    padding:45px 20px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.35);
+
+    backdrop-filter:blur(18px);
+
+    border-top:2px solid rgba(255,255,255,.45);
+
+}
+
+footer h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    color:#ff3f8b;
+
+    margin-bottom:15px;
+
+}
+
+footer p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+footer strong,
+footer b{
+
+    color:#ff2d75;
+
+    font-size:22px;
+
+}
+
+/* ===========================================
+   PART 3
+   Responsive Design + Finishing Effects
+=========================================== */
+
+
+/* ===========================================
+   PHOTO HOVER EFFECT
+=========================================== */
+
+.photoCard:hover .text h2{
+
+    color:#ff2d75;
+    transition:.4s;
+
+}
+
+.photoCard:hover .text{
+
+    transform:translateY(-5px);
+    transition:.4s;
+
+}
+
+
+
+/* ===========================================
+   GLASS SHINE EFFECT
+=========================================== */
+
+.photoCard{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+.photoCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+    left:-50%;
+
+    width:40%;
+    height:300%;
+
+    background:rgba(255,255,255,.35);
+
+    transform:rotate(25deg);
+
+    transition:.8s;
+
+}
+
+.photoCard:hover::before{
+
+    left:130%;
+
+}
+
+
+
+/* ===========================================
+   HERO GLOW
+=========================================== */
+
+.hero h1{
+
+    animation:titleGlow 3s ease-in-out infinite;
+
+}
+
+@keyframes titleGlow{
+
+0%{
+
+text-shadow:
+0 0 10px #ff80b5,
+0 0 20px #ff80b5;
+
+}
+
+50%{
+
+text-shadow:
+0 0 20px #ff3d88,
+0 0 40px #ff3d88,
+0 0 70px #ff7eb3;
+
+}
+
+100%{
+
+text-shadow:
+0 0 10px #ff80b5,
+0 0 20px #ff80b5;
+
+}
+
+}
+
+
+
+/* ===========================================
+   PHOTO FLOATING
+=========================================== */
+
+.image img{
+
+animation:imageFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes imageFloat{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+
+
+/* ===========================================
+   LETTER ANIMATION
+=========================================== */
+
+.letter,
+.loveLetter,
+.promise{
+
+animation:fadeUp 1s ease;
+
+}
+
+.letterBox{
+
+animation:floatItem 5s ease-in-out infinite;
+
+}
+
+
+
+/* ===========================================
+   FOOTER HEART
+=========================================== */
+
+footer::after{
+
+content:"❤️";
+
+display:block;
+
+font-size:35px;
+
+margin-top:20px;
+
+animation:pulse 2s infinite;
+
+}
+
+
+
+/* ===========================================
+   STAR SPARKLES
+=========================================== */
+
+body::before{
+
+content:"✨ ✨ ⭐ ✨ ⭐ ✨ ⭐ ✨";
+
+position:fixed;
+
+top:15px;
+left:0;
+
+width:100%;
+
+text-align:center;
+
+font-size:20px;
+
+opacity:.25;
+
+pointer-events:none;
+
+animation:sparkle 10s linear infinite;
+
+}
+
+@keyframes sparkle{
+
+0%{
+
+transform:translateX(-20px);
+
+}
+
+50%{
+
+transform:translateX(20px);
+
+}
+
+100%{
+
+transform:translateX(-20px);
+
+}
+
+}
+
+
+
+/* ===========================================
+   HEART CORNERS
+=========================================== */
+
+body::after{
+
+content:"💖";
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+font-size:50px;
+
+opacity:.35;
+
+pointer-events:none;
+
+animation:heartBeat 1.6s infinite;
+
+}
+
+@keyframes heartBeat{
+
+0%{
+
+transform:scale(1);
+
+}
+
+25%{
+
+transform:scale(1.15);
+
+}
+
+50%{
+
+transform:scale(.95);
+
+}
+
+75%{
+
+transform:scale(1.15);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+
+
+/* ===========================================
+   BUTTON RIPPLE
+=========================================== */
+
+.navigation a,
+.scrollBtn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.navigation a::before,
+.scrollBtn::before{
+
+content:"";
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+width:0;
+height:0;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.3);
+
+transform:translate(-50%,-50%);
+
+transition:.6s;
+
+}
+
+.navigation a:hover::before,
+.scrollBtn:hover::before{
+
+width:350px;
+height:350px;
+
+}
+
+
+
+/* ===========================================
+   IMAGE SHADOW
+=========================================== */
+
+.image{
+
+filter:drop-shadow(0 15px 25px rgba(255,105,180,.25));
+
+}
+
+
+
+/* ===========================================
+   MOBILE RESPONSIVE
+=========================================== */
+
+@media(max-width:1100px){
+
+.photoCard,
+.photoCard.reverse{
+
+flex-direction:column;
+
+text-align:center;
+
+gap:35px;
+
+}
+
+.text h2{
+
+font-size:48px;
+
+}
+
+.hero h1{
+
+font-size:75px;
+
+}
+
+.hero h2{
+
+font-size:28px;
+
+}
+
+.hero h3{
+
+font-size:38px;
+
+}
+
+.image img{
+
+max-width:350px;
+
+}
+
+}
+
+
+
+/* ===========================================
+   TABLET
+=========================================== */
+
+@media(max-width:768px){
+
+.hero{
+
+padding:30px 20px;
+
+}
+
+.hero h1{
+
+font-size:58px;
+
+}
+
+.hero h2{
+
+font-size:24px;
+
+}
+
+.hero h3{
+
+font-size:34px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+padding:25px;
+
+}
+
+.photoCard{
+
+padding:25px;
+
+}
+
+.text h2{
+
+font-size:40px;
+
+}
+
+.text p{
+
+font-size:16px;
+
+}
+
+.letter h1,
+.promise h1,
+.loveLetter h1,
+.ending h1,
+.loveQuote h1{
+
+font-size:52px;
+
+}
+
+.letter,
+.promise,
+.loveLetter,
+.loveQuote{
+
+padding:35px 25px;
+
+}
+
+.navigation{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.navigation a{
+
+width:260px;
+
+text-align:center;
+
+}
+
+.cat{
+
+width:90px;
+
+}
+
+}
+
+
+
+/* ===========================================
+   SMALL PHONES
+=========================================== */
+
+@media(max-width:480px){
+
+.hero h1{
+
+font-size:46px;
+
+}
+
+.hero h2{
+
+font-size:20px;
+
+}
+
+.hero h3{
+
+font-size:28px;
+
+}
+
+.hero p{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+.text h2{
+
+font-size:34px;
+
+}
+
+.text p{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+.image img{
+
+max-width:280px;
+
+border-width:5px;
+
+}
+
+.letterBox{
+
+padding:25px;
+
+}
+
+.letterBox p{
+
+font-size:16px;
+
+line-height:1.9;
+
+}
+
+footer h2{
+
+font-size:38px;
+
+}
+
+footer p{
+
+font-size:15px;
+
+}
+
+.scrollBtn{
+
+padding:14px 30px;
+
+font-size:17px;
+
+}
+
+.navigation a{
+
+font-size:17px;
+
+padding:14px 30px;
+
+}
+
+.cat{
+
+display:none;
+
+}
+
+}
+
+
+
+/* ===========================================
+   SMOOTH FADE ON LOAD
+=========================================== */
+
+.hero,
+.photoCard,
+.letter,
+.promise,
+.loveLetter,
+.loveQuote,
+.ending,
+footer{
+
+animation:fadeUp .8s ease;
+
+}
+
+
+
+/* ===========================================
+   THE END ❤️
+=========================================== */
